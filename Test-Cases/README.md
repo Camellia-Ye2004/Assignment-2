@@ -1,7 +1,8 @@
 # CFA regression test fixtures
 
 The initial repository contained only `Assignment-2-CFA/Test-Cases`.
-This directory provides the requested submission location, `Assignment-2-IR/Test-Cases`.
+This directory provides the requested submission location, `Assignment-2/Test-Cases`
+(the `Test-Cases` directory at the repository root).
 `branch.c`, `buffer.c`, `loop.c`, `multi-call.c`, and `simple-call.c` copy those five
 original fixtures with whitespace normalized. The other three files are additional regression tests,
 not a separately supplied official IR test suite.

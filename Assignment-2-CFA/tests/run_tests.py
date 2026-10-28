@@ -12,7 +12,7 @@ for flag in ('clang', 'cfga', 'checker', 'output-dir'):
 args = parser.parse_args()
 output = args.output_dir.resolve()
 output.mkdir(parents=True, exist_ok=True)
-fixtures = Path(__file__).resolve().parents[2] / 'Assignment-2-IR' / 'Test-Cases'
+fixtures = Path(__file__).resolve().parents[2] / 'Test-Cases'
 expected = {'simple-call': 1, 'multi-call': 1, 'loop': 1, 'branch': 2,
             'buffer': 4, 'nested-call': 1, 'shared-callee-branch': 2,
             'external-call': 1}
