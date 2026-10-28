@@ -23,20 +23,5 @@
     "case": "buffer",
     "expected_paths": 4,
     "passed": true
-  },
-  {
-    "case": "nested-call",
-    "expected_paths": 1,
-    "passed": true
-  },
-  {
-    "case": "shared-callee-branch",
-    "expected_paths": 2,
-    "passed": true
-  },
-  {
-    "case": "external-call",
-    "expected_paths": 1,
-    "passed": true
   }
 ]

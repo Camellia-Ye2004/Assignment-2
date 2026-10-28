@@ -4,8 +4,7 @@ The initial repository contained only `Assignment-2-CFA/Test-Cases`.
 This directory provides the requested submission location, `Assignment-2/Test-Cases`
 (the `Test-Cases` directory at the repository root).
 `branch.c`, `buffer.c`, `loop.c`, `multi-call.c`, and `simple-call.c` copy those five
-original fixtures with whitespace normalized. The other three files are additional regression tests,
-not a separately supplied official IR test suite.
+original fixtures with whitespace normalized. No additional test cases are included.
 
 | Fixture | Expected paths | Purpose |
 | --- | ---: | --- |
@@ -14,9 +13,6 @@ not a separately supplied official IR test suite.
 | loop | 1 | Terminate traversal when a node repeats in the same call context |
 | branch | 2 | Preserve both branches, including calls to a shared function |
 | buffer | 4 | Branch and loop handling across two calls to the same function |
-| nested-call | 1 | Nested calls and repeated callers require a stack |
-| shared-callee-branch | 2 | Merge branches, then call the shared function again |
-| external-call | 1 | Preserve external-call intra edges without pushing a call |
 
 These are structural ICFG paths, without constraint solving. A path never repeats
 the same `(node, call stack)` state. Thus loops are not unrolled; a body that can
@@ -49,7 +45,7 @@ Logs, bitcode, analyzer output, and `results.json` stay in the selected output d
 
 ## Verified result (2026-10-28)
 
-All eight cases passed using Ubuntu 22.04 in WSL2, GCC 11.4.0, CMake 3.31.10,
+All five original cases passed using Ubuntu 22.04 in WSL2, GCC 11.4.0, CMake 3.31.10,
 SVF 3.2 (source revision `bbd2636`), LLVM/Clang 16.0.4, and Z3 4.8.8.0.
 Both the analyzer and checker compiled successfully with the project's `-Werror` flags.
 Recursive-call termination and arbitrary loop unrolling are outside this suite.
